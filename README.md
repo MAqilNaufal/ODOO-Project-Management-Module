@@ -16,9 +16,11 @@ This is a custom **Project Management Module** built for Odoo, designed to manag
    git clone https://github.com/MAqilNaufal/ODOO-Project-Management-Module.git
 
 2. Copy the project_management folder to your Odoo addons directory:
+   ```bash   
    cp -r project_management /path/to/odoo/addons/
 
 3. Update your Odoo instance:
+   ```bash
    ./odoo-bin -u all
 
 4. Activate the module through the Odoo interface:
