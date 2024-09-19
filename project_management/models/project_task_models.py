@@ -27,6 +27,9 @@ class ProjectTask(models.Model):
     # Task Dependency
     depends_on = fields.Many2one('project.task', string='Depends on Task')
 
+    # Link to Milestone (missing field added here)
+    milestone_id = fields.Many2one('project.milestone', string='Milestone')
+
     # Ensure no circular dependencies
     @api.constrains('depends_on')
     def _check_task_dependency(self):
