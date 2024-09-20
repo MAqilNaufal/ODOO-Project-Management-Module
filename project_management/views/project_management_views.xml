@@ -2,23 +2,24 @@
 <odoo>
     <!-- Form view for Project Management -->
     <record id="view_project_management_form" model="ir.ui.view">
-        <field name="name">project.management.form</field>
-        <field name="model">project.management</field>
-        <field name="arch" type="xml">
-            <form string="Project Management">
-                <sheet>
-                    <group>
-                        <field name="name"/>
-                        <field name="description"/>
-                        <field name="start_date"/>
-                        <field name="end_date"/>
-                        <field name="state"/>
-                        <field name="partner_id"/>
-                    </group>
-                </sheet>
-            </form>
-        </field>
-    </record>
+    <field name="name">project.management.form</field>
+    <field name="model">project.management</field>
+    <field name="arch" type="xml">
+        <form string="Project Management">
+            <sheet>
+                <group>
+                    <field name="partner_id"/>  <!-- Field to select customer (res.partner) -->
+                    <field name="name"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="state"/>
+                    <field name="description"/>
+                </group>
+            </sheet>
+        </form>
+    </field>
+</record>
+
 
     <!-- Tree view for Project Management -->
     <record id="view_project_management_tree" model="ir.ui.view">

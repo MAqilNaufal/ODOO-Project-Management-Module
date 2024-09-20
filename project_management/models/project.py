@@ -5,6 +5,8 @@ class Project(models.Model):
     _name = 'project.management'
     _description = 'Project Management'
 
+    partner_id = fields.Many2one(
+        'res.partner', ondelete='cascade', required=True, string='Customer')
     name = fields.Char(string='Project Name', required=True)
     description = fields.Text(string='Description')
     start_date = fields.Date(string='Start Date')
@@ -15,5 +17,3 @@ class Project(models.Model):
         ('done', 'Done'),
         ('cancelled', 'Cancelled')
     ], string='Status', default='draft')
-
-    partner_id = fields.Many2one('res.partner', string='Customer')

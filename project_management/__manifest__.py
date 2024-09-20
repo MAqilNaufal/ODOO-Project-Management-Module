@@ -7,13 +7,12 @@
         Includes task dependencies, milestone tracking, and Gantt chart visualization.
     """,
     'author': 'MAqil Naufal',
-    'website': 'https://yourwebsite.com',
+    'website': 'https://github.com/MAqilNaufal/ODOO-Project-Management-Module',
     'category': 'Project',
-    # Ensure project app is a dependency for task and Gantt features
     'depends': ['base', 'project'],
     'data': [
-        'security/ir.model.access.csv',  # Security access control
-        'views/project_management_views.xml',  # View definitions
+        'security/ir.model.access.csv',
+        'views/project_management_views.xml',
     ],
     'installable': True,
     'application': True,
